@@ -7,8 +7,8 @@
 // @match        https://www.beatsavior.io/*
 // @match        https://beat-savior.herokuapp.com/*
 // @icon         https://www.beatsavior.io/img/bsicon_ter.0c7a98a6.svg
-// @updateURL    https://github.com/jundoll/BeatSaviorEnhanced/raw/master/scoresaber.user.js
-// @downloadURL  https://github.com/jundoll/BeatSaviorEnhanced/raw/master/scoresaber.user.js
+// @updateURL    https://github.com/jundoll/BeatSaviorEnhanced/raw/main/beatsavior.user.js
+// @downloadURL  https://github.com/jundoll/BeatSaviorEnhanced/raw/main/beatsavior.user.js
 // @run-at       document-start
 // for Tampermonkey
 // @grant        GM_xmlhttpRequest
