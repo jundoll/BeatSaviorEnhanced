@@ -195,6 +195,10 @@
                 else {
                     fromDate = get_from_date_from_user_and_song(user_id, song_id);
                 }
+                // if fromDate still exists
+                if (col.querySelector("div.fromDate") !== null) {
+                    col.removeChild(col.lastChild);
+                }
                 into(col, create("div", { class: "fromDate", style: {'text-align': "center"}}, String(fromDate)));
             }
         }
@@ -227,8 +231,9 @@
         on_load_body();
     }
     onload();
-    window.addEventListener("DOMContentLoaded", onload);
+    //window.addEventListener("DOMContentLoaded", onload);
     window.addEventListener("load", onload);
+    window.addEventListener("change", onload);
 
 
 })();
