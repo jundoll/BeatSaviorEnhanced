@@ -159,8 +159,6 @@
         return Global.profileScores[user_id][row_id].id
     }
     function get_from_date_from_user_and_song(user_id, song_id) {
-        console.log(user_id)
-        console.log(Global.profileScores[user_id])
         const scores_list = Global.profileScores[user_id]
         for (let score of scores_list) {
             if (score.id === song_id) {
@@ -184,7 +182,6 @@
         let song_id = ""
         for (const row of table_row) {
             irow++;
-            console.log(irow)
             const table_col = row.querySelectorAll("tr td.score-cell");
             icol = -1
             song_id = get_song_id_from_user_and_row(first_user_id, irow)
@@ -207,11 +204,9 @@
     let has_loaded_head = false;
     function on_load_head() {
         if (!document.head) {
-            console.log("return")
             return;
         }
         if (has_loaded_head) {
-            console.log("return")
             return;
         }
         //has_loaded_head = true;
@@ -219,11 +214,9 @@
     let has_loaded_body = false;
     function on_load_body() {
         if (document.readyState !== "complete" && document.readyState !== "interactive") {
-            console.log("return")
             return;
         }
         if (has_loaded_body) {
-            console.log("return")
             return;
         }
         //has_loaded_body = true;
