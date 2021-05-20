@@ -151,7 +151,6 @@
         }
         const span = check(document.querySelector("span.q-gutter-xs"));
         const user_list = span.querySelectorAll("div.user-card");
-        console.log(user_list)
         const href = user_list[num].querySelector("a").getAttribute("href")
         const user_id = href.match(/^.*\Dprofile\/(\d+)+$/)[1]
         return user_id
