@@ -147,7 +147,6 @@
     }
     function get_user_id_from_profile_link(num) {
         if (!is_scorescomparator_page()) {
-            console.log("check")
             return;
         }
         const span = check(document.querySelector("span.q-gutter-xs"));
@@ -174,7 +173,6 @@
     }
     function setup_from_date_user_site() {
         if (!is_scorescomparator_page()) {
-            console.log("check")
             return;
         }
 
