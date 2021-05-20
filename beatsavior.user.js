@@ -24,7 +24,8 @@
 
     class Global {
     }
-    Global.scorescomparator_link = "https://beat-savior.herokuapp.com/#/scorescomparator";
+    Global.baseurl1 = "https://beat-savior.herokuapp.com"
+    Global.baseurl2 = "https://www.beatsavior.io"
 
     function create(tag, attrs, ...children) {
         if (tag === undefined) {
@@ -140,14 +141,18 @@
         localStorage.setItem("profileScores", "{}");
     }
     function is_scorescomparator_page() {
-        return window.location.href.toLowerCase().startsWith(Global.scorescomparator_link);
+        const comparator1 = window.location.href.toLowerCase().startsWith(Global.baseurl1 + "/#/scorescomparator")
+        const comparator2 = window.location.href.toLowerCase().startsWith(Global.baseurl2 + "/#/scorescomparator")
+        return comparator1 || comparator2
     }
     function get_user_id_from_profile_link(num) {
         if (!is_scorescomparator_page()) {
+            console.log("check")
             return;
         }
         const span = check(document.querySelector("span.q-gutter-xs"));
         const user_list = span.querySelectorAll("div.user-card");
+        console.log(user_list)
         const href = user_list[num].querySelector("a").getAttribute("href")
         const user_id = href.match(/^.*\Dprofile\/(\d+)+$/)[1]
         return user_id
@@ -169,6 +174,7 @@
     }
     function setup_from_date_user_site() {
         if (!is_scorescomparator_page()) {
+            console.log("check")
             return;
         }
 
